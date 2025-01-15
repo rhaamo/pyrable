@@ -1,0 +1,19 @@
+services:
+  dns:
+    image: kimbtechnologies/radio_dns
+    restart: always
+    network_mode: host
+    environment:
+      - SERVER_BIND=0.0.0.0
+      - SERVER_PORT=53
+      - SERVER_UPSTREAM=192.168.10.1
+      - RADIO_IP=192.168.10.140
+      - ALLOWED_DOMAIN=all
+  pyrable:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    network_mode: host
+    volumes:
+      - ./ssl:/ssl:ro
