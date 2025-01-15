@@ -1,6 +1,7 @@
 # pyrable
 
-This a reimplementation of the Frontier Silicon Airable backend.
+This a reimplementation of the Frontier Silicon Airable backend, this is the backend that handles the "Stations List" on your radio.
+This custom backend will completly override the lists by whatever station streams you listed in the config.
 
 This is heavily inspired by https://github.com/Half-Shot/fairable
 
