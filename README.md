@@ -3,11 +3,18 @@
 This a reimplementation of the Frontier Silicon Airable backend, this is the backend that handles the "Stations List" on your radio.
 This custom backend will completly override the lists by whatever station streams you listed in the config.
 
-This is heavily inspired by https://github.com/Half-Shot/fairable
+This is heavily inspired by 
 
 # Devices
 
-This should work with any device that uses a Frontier Silicon SoC and uses the endpoint `airable.wifiradiofrontier.com`
+This should work with any device that uses a Frontier Silicon SoC and uses the endpoint `airable.wifiradiofrontier.com`.
+
+Tested and used with success with:
+- Philips TAPR802 (Firmware ir-cui-FS2340-0000-0024_V4.0.27.d1c256-1B11)
+
+# Differences from [Radio-API](https://github.com/KIMB-technologies/Radio-API)
+Radio-API works for (I guess) older webradios where the API is in XML, there is maybe some compatibility for the newer API backend but it's either in the backend or the radio, who knows (it doesn't work at all with mine).
+Anyway, Radio-API will not work with the newer webradios that only uses the Airable API as it is now in json (awful json but still json)
 
 # Setup
 
@@ -51,4 +58,8 @@ You will need to have a `ssl/` directory with the certs inside.
 # TODO
 
 Implement the fsapi thing for `/player/state`.
-Idk
+Idk, maybe implement some sort of https://www.radio-browser.info/ browser
+
+# Acknowledgements
+
+- Heavily inspired by https://github.com/Half-Shot/fairable (I wasn't in the mood to do javascript :p)
