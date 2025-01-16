@@ -3,8 +3,6 @@
 This a reimplementation of the Frontier Silicon Airable backend, this is the backend that handles the "Stations List" on your radio.
 This custom backend will completly override the lists by whatever station streams you listed in the config.
 
-This is heavily inspired by 
-
 # Devices
 
 This should work with any device that uses a Frontier Silicon SoC and uses the endpoint `airable.wifiradiofrontier.com`.
